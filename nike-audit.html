@@ -1,0 +1,798 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.4); -webkit-text-stroke: rgba(255, 255, 255, 0.4)}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #fc3507; -webkit-text-stroke: #fc3507}
+    p.p5 {margin: 0.0px 0.0px 56.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.45); -webkit-text-stroke: rgba(255, 255, 255, 0.45)}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.3); -webkit-text-stroke: rgba(255, 255, 255, 0.3)}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.75); -webkit-text-stroke: rgba(255, 255, 255, 0.75)}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.65); -webkit-text-stroke: rgba(255, 255, 255, 0.65)}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #fc3507; -webkit-text-stroke: #fc3507}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #262626; -webkit-text-stroke: #262626}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 72.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6)}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #262626; -webkit-text-stroke: #262626}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #fc3507; -webkit-text-stroke: #fc3507}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #1d48e6; -webkit-text-stroke: #1d48e6}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d; min-height: 16.0px}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #fc3507}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #0d0d0d}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #fc3507; -webkit-text-stroke: #fc3507}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.3); -webkit-text-stroke: rgba(255, 255, 255, 0.3)}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 28.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 15.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.2); -webkit-text-stroke: rgba(255, 255, 255, 0.2); background-color: #0d0d0d}
+    span.s1 {font-kerning: none; background-color: rgba(14, 14, 14, 0.95)}
+    span.s2 {font-kerning: none; color: #fc3507; -webkit-text-stroke: 0px #fc3507}
+    span.s3 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: rgba(255, 255, 255, 0.4); -webkit-text-stroke: 0px rgba(255, 255, 255, 0.4)}
+    span.s4 {font-kerning: none; background-color: #0e0e0e}
+    span.s5 {font-kerning: none}
+    span.s6 {font-kerning: none; background-color: #fc3507}
+    span.s7 {font-kerning: none; background-color: #0d0d0d}
+    span.s8 {font-kerning: none; background-color: #f5f5f5}
+    span.s9 {font-kerning: none; background-color: #ffffff}
+    span.s10 {font-kerning: none; background-color: rgba(13, 13, 13, 0.059)}
+    span.s11 {font-kerning: none; background-color: rgba(252, 53, 7, 0.078)}
+    span.s12 {font-kerning: none; background-color: rgba(29, 72, 230, 0.059)}
+    span.s13 {font: 15.0px 'Helvetica Neue'; font-kerning: none; color: #0d0d0d; -webkit-text-stroke: 0px #0d0d0d}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 46.4px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td2 {width: 71.6px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td3 {width: 152.8px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td4 {width: 80.5px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td5 {width: 69.5px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td6 {width: 92.0px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td7 {width: 84.5px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td8 {width: 77.0px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td9 {width: 107.0px; background-color: #0d0d0d; padding: 14.0px 16.0px 14.0px 16.0px}
+    td.td10 {width: 46.4px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td11 {width: 71.6px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td12 {width: 152.8px; max-width: 280.0px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td13 {width: 80.5px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td14 {width: 69.5px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td15 {width: 92.0px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td16 {width: 84.5px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td17 {width: 77.0px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td18 {width: 107.0px; background-color: #fc3507; background-color: rgba(252, 53, 7, 0.039); padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td19 {width: 46.4px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td20 {width: 71.6px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td21 {width: 152.8px; max-width: 280.0px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td22 {width: 80.5px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td23 {width: 69.5px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td24 {width: 92.0px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td25 {width: 84.5px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td26 {width: 77.0px; padding: 13.0px 16.0px 13.0px 16.0px}
+    td.td27 {width: 107.0px; padding: 13.0px 16.0px 13.0px 16.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"><a href="file:///Users/anishmurari/Downloads/index.html">AM<span class="s2">.</span></a></span></p>
+<p class="p2"><span class="s1"><a href="file:///Users/anishmurari/Downloads/index.html">← BACK TO PORTFOLIO<span class="s3"></span></a></span></p>
+<p class="p3"><span class="s4">SOCIAL MEDIA AUDIT · INSTAGRAM ANALYSIS · JUNE 2026</span></p>
+<h1 style="margin: 0.0px 0.0px 24.0px 0.0px; font: 48.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s4">Nike Instagram</span><span class="s5"><br>
+</span><span class="s4">Content Audit</span></h1>
+<p class="p5"><span class="s4">A data-driven analysis of Nike's Instagram strategy<span class="Apple-converted-space">  </span>— tracking engagement across 20 posts to identify what actually drives performance.</span></p>
+<p class="p6"><span class="s4">ANALYST</span></p>
+<p class="p7"><span class="s4">Anish Murari</span></p>
+<p class="p6"><span class="s4">PLATFORM</span></p>
+<p class="p7"><span class="s4">Instagram (@nike)</span></p>
+<p class="p6"><span class="s4">PERIOD</span></p>
+<p class="p7"><span class="s4">June 2 – June 23, 2026</span></p>
+<p class="p6"><span class="s4">SAMPLE SIZE</span></p>
+<p class="p7"><span class="s4">20 Posts</span></p>
+<p class="p8"><span class="s6">13M</span></p>
+<p class="p9"><span class="s6">PEAK LIKES (1 POST)</span></p>
+<p class="p8"><span class="s6">1.2M</span></p>
+<p class="p9"><span class="s6">AVG TOTAL ENGAGEMENT</span></p>
+<p class="p8"><span class="s6">~516K</span></p>
+<p class="p9"><span class="s6">AVG ENG. (EX-OUTLIER)</span></p>
+<p class="p8"><span class="s6">14.2M</span></p>
+<p class="p9"><span class="s6">PEAK POST TOTAL ENG.</span></p>
+<p class="p8"><span class="s6">62.4K</span></p>
+<p class="p9"><span class="s6">PEAK COMMENTS</span></p>
+<p class="p10"><span class="s5">OVERVIEW</span></p>
+<p class="p11"><span class="s5">Background &amp; Methodology</span></p>
+<p class="p12"><span class="s5">This audit analyzes Nike's Instagram account (@nike) during a particularly active period for the brand — the lead-up to the 2026 FIFA World Cup. The 20 most recent posts as of June 23, 2026 were tracked, covering content published between June 2 and June 23.</span></p>
+<p class="p12"><span class="s5">For each post, four engagement metrics were logged: likes, comments, reposts, and shares. Posts were also categorized by content type (campaign-branded vs. athlete-driven vs. product) and tagged for the primary subject featured. The goal was to identify whether Nike's heavy investment in the "Rip The Script" World Cup campaign was translating into engagement, and which content archetypes were actually driving performance.</span></p>
+<p class="p12"><span class="s5">The sample period captured a natural experiment: Nike was running a coordinated, high-production World Cup campaign while simultaneously posting athlete-centric and product content. Comparing engagement across these content types against a single non-campaign post produced the audit's central finding.</span></p>
+<p class="p10"><span class="s7">CENTRAL FINDING</span></p>
+<p class="p13"><span class="s7">13M+</span></p>
+<p class="p14"><span class="s7">A single athlete photo — Ronaldo and LeBron captioned "Define Greatness. Then Redefine It." — generated more likes than every World Cup campaign post combined. It had zero campaign branding.</span></p>
+<p class="p10"><span class="s5">CONTENT STRATEGY</span></p>
+<p class="p11"><span class="s5">What Nike Was Posting</span></p>
+<p class="p12"><span class="s5">The 20-post sample broke down into three distinct content pillars.<span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s5">1. The first pillar was the World Cup Campaign Content, which were posts tied to Nike's "Rip The Script" campaign featuring a fictional narrative built around Erling Haaland and Channing Tatum, high-production football visuals, and pre-event teaser content. This accounted for roughly half the posts in the sample.</span></p>
+<p class="p12"><span class="s5">2. The second pillar was Athlete Moment Content, as there were posts celebrating big wins and milestones such as Jalen Brunson's NBA Finals MVP, Mirra Andreeva winning the French Open at 19, and<span class="Apple-converted-space">  </span>Nelly Korda's LPGA major.These posts were reactive, tied to live sporting events, and typically featured a clean athlete image with a punchy tagline.</span></p>
+<p class="p12"><span class="s5">3. The third pillar was Icon Content, featuring posts of Nike's biggest global athletes in a standalone context.This pillar had the smallest post count but produced the highest engagement numbers by a significant margin.</span></p>
+<p class="p10"><span class="s5">ENGAGEMENT ANALYSIS</span></p>
+<p class="p11"><span class="s5">Campaign vs. Icon Content</span></p>
+<p class="p12"><span class="s5">The "Rip The Script" campaign's best-performing post — "It was all going to plan until instincts took over" — generated 2.4M likes and 3.84M total engagement. That's a strong number in isolation, however compared to the Ronaldo/LeBron post (13M likes, 14.2M total engagement), the campaign's flagship content performed at roughly 27% of the top outlier's engagement, despite significantly higher production value and coordinated cross-account amplification.</span></p>
+<p class="p12"><span class="s5">The "Sleep well, NY" post — a single cinematic reel celebrating the Knicks' championship with no explicit product or campaign tie-in — generated 747K likes and 1.01M total engagement, making it the second highest-performing post by total engagement excluding the top outlier. Again, no campaign branding.</span></p>
+<p class="p12"><span class="s5">The weakest performers in the sample were all campaign-adjacent content with tactical framing: the Strikers Know Best series (48.2K likes), the Cantona short film teaser (16.2K likes), and the wheelchair tennis celebration post (22.3K likes). These posts carried stronger branded messaging but generated a fraction of the engagement produced by simpler, icon-led content.</span></p>
+<p class="p10"><span class="s8">RAW DATA</span></p>
+<p class="p11"><span class="s8">All 20 Posts — Engagement Tracker</span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p15"><span class="s9">#</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p15"><span class="s9">DATE</span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p15"><span class="s9">CAPTION / THEME</span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p15"><span class="s9">TYPE</span></p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p15"><span class="s9">LIKES</span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p15"><span class="s9">COMMENTS</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p15"><span class="s9">REPOSTS</span></p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p15"><span class="s9">SHARES</span></p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p15"><span class="s9">TOTAL ENG.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td10">
+        <p class="p16"><span class="s9">01</span></p>
+      </td>
+      <td valign="top" class="td11">
+        <p class="p17"><span class="s9">Jun 2</span></p>
+      </td>
+      <td valign="top" class="td12">
+        <p class="p18"><span class="s9">"Define Greatness. Then Redefine It."</span></p>
+        <p class="p19"><span class="s10">Icon-Driven</span></p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p19"><span class="s10">Photo</span></p>
+      </td>
+      <td valign="top" class="td14">
+        <p class="p20"><span class="s9">13M</span></p>
+      </td>
+      <td valign="top" class="td15">
+        <p class="p20"><span class="s9">62.4K</span></p>
+      </td>
+      <td valign="top" class="td16">
+        <p class="p20"><span class="s9">387K</span></p>
+      </td>
+      <td valign="top" class="td17">
+        <p class="p20"><span class="s9">754K</span></p>
+      </td>
+      <td valign="top" class="td18">
+        <p class="p20"><span class="s9">14.2M</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">02</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 3</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Nobody ever dreams of doing what they're told" — Rip The Script teaser</span></p>
+        <p class="p10"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">1.4M</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">8,563</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">51.8K</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">73K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">1.53M</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">03</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 4</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"It was all going to plan until instincts took over" — Rip The Script</span></p>
+        <p class="p10"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">2.4M</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">55.1K</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">280K</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">1.1M</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">3.84M</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">04</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 5</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"RipTheScript.jpeg" — Mbappé bicycle kick</span></p>
+        <p class="p10"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">1.1M</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">4,156</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">23K</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">32.9K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">1.16M</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">05</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 6</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"A clean sweep" — wheelchair tennis (de Groot / Vink)</span></p>
+        <p class="p22"><span class="s12">Athlete</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">22.3K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">135</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">200</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">380</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">23K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">06</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 6</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Fight beyond your years" — Mirra Andreeva, French Open</span></p>
+        <p class="p22"><span class="s12">Athlete</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">141K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">1,272</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">2,079</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">4,532</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">149K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">07</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 7</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"The GOATs' Goodbye" — trailer (LeBron, Ronaldo, Serena)</span></p>
+        <p class="p19"><span class="s10">Icon-Driven</span></p>
+        <p class="p23"><span class="s5"></span><br></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">158K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">1,104</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">5,699</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">14.9K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">180K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">08</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 7</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Easy to watch. Hard to beat." — Nelly Korda, LPGA</span></p>
+        <p class="p22"><span class="s12">Athlete</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">29.9K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">325</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">413</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">1,406</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">32K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">09</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 8</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Going back to the drawing board" — Serena Williams</span></p>
+        <p class="p19"><span class="s10">Icon-Driven</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">178K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">2,227</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">4,922</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">13.8K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">199K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">10</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 11</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Dear Football, @ericcantona has a message for you"</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">42.9K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">410</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">1,104</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">2,959</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">47K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">11</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 13</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Every move is movie-worthy" — Vini Jr</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">43.6K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">2,192</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">684</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">779</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">47K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">12</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 13</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Sleep well, NY" — Knicks championship</span></p>
+        <p class="p22"><span class="s12">Athlete</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">747K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">8,375</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">77.5K</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">178K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">1.01M</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">13</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 14</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"NBA Champion. Finals MVP." — Jalen Brunson</span></p>
+        <p class="p22"><span class="s12">Athlete</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">330K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">1,354</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">7,242</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">9,414</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">348K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">14</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 15</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Nike Atelier for Désiré Doué" — custom kit reveal</span></p>
+        <p class="p25"><span class="s10">Icon-Driven</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">243K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">1,320</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">3,045</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">5,647</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">253K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">15</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 16</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Welcome to Strikers Know Best"</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">48.2K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">790</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">788</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">1,752</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">52K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">16</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 17</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Still explosive." — Ronaldo (World Cup content)</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">199K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">2,123</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">11.1K</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">16.7K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">229K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">17</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 17</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Introducing the Caitlin 1" — signature shoe launch</span></p>
+        <p class="p22"><span class="s12">Athlete</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">245K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">4,057</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">6,887</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">57.2K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">313K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">18</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 22</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Time for liftoff" — Haaland &amp; Channing Tatum</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">79.7K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">171</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">971</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">1,564</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">82K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">19</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 23</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"Oh Captain, My Captain" — Cantona short film</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Video</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">16.2K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">104</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">367</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">1,374</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">18K</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td19">
+        <p class="p16"><span class="s9">20</span></p>
+      </td>
+      <td valign="top" class="td20">
+        <p class="p17"><span class="s9">Jun 23</span></p>
+      </td>
+      <td valign="top" class="td21">
+        <p class="p18"><span class="s9">"There's only one @cristiano" — World Cup retrospective</span></p>
+        <p class="p24"><span class="s11">World Cup</span></p>
+      </td>
+      <td valign="top" class="td22">
+        <p class="p21"><span class="s8">Photo</span></p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p16"><span class="s9">285K</span></p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p16"><span class="s9">1,821</span></p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p16"><span class="s9">11.9K</span></p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p16"><span class="s9">13.3K</span></p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p16"><span class="s9">312K</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><span class="s5">KEY INSIGHTS</span></p>
+<p class="p11"><span class="s5">What the Data Shows</span></p>
+<p class="p26"><span class="s5">Insight 01</span></p>
+<p class="p27"><span class="s5">Icon pairings outperform campaign content by a wide margin</span></p>
+<p class="p28"><span class="s5">The Ronaldo × LeBron post generated 14.2M total engagement — more than 3.5x the next best post and more than every campaign post combined. The common factor: two globally recognized athletes, no campaign tag, no product push.</span></p>
+<p class="p26"><span class="s5">Insight 02</span></p>
+<p class="p27"><span class="s5">Cultural moments drive spikes, not campaign mechanics</span></p>
+<p class="p28"><span class="s5">The "Sleep well, NY" Knicks post (1.01M total eng.) and the Jalen Brunson Finals MVP post (348K) both outperformed most campaign content. They were reactive, tied to real-world events, and had minimal production complexity.</span></p>
+<p class="p26"><span class="s5">Insight 03</span></p>
+<p class="p27"><span class="s5">Campaign fatigue is visible in the data after week 2</span></p>
+<p class="p28"><span class="s5">Rip The Script posts published after June 13 averaged 56K total engagement, a steep drop from the campaign's opening posts (1.53M and 3.84M). Later campaign content underperformed even the non-campaign mid-sample posts.</span></p>
+<p class="p26"><span class="s5">Insight 04</span></p>
+<p class="p27"><span class="s5">Comments-to-likes ratio signals depth of engagement</span></p>
+<p class="p28"><span class="s5">The Ronaldo/LeBron post had a 0.48% comment-to-like ratio. The Vini Jr campaign post had a 5.0% ratio, which is higher, polarizing or conversation-driving content. High comment ratios don't always mean positive reception.</span></p>
+<p class="p10"><span class="s5">RECOMMENDATIONS</span></p>
+<p class="p11"><span class="s5">Strategic Takeaways for Nike</span></p>
+<p class="p10"><span class="s8">REC 01</span></p>
+<p class="p29"><span class="s8">Invest more in cross-sport, icon-pairing content</span></p>
+<p class="p28"><span class="s8">The data strongly supports scheduling 2–3 non-campaign athlete pairing posts per major event window. These require minimal production relative to their engagement return and can be seeded ahead of or during campaign pushes to sustain overall account performance.</span></p>
+<p class="p10"><span class="s8">REC 02</span></p>
+<p class="p29"><span class="s8">Shorten campaign content windows</span></p>
+<p class="p28"><span class="s8">The Rip The Script campaign ran over 3 weeks and showed clear engagement decay after week 1. Future campaigns should front-load the highest-concept content and compress the timeline, maintaining urgency and preventing audience drop-off.</span></p>
+<p class="p10"><span class="s8">REC 03</span></p>
+<p class="p29"><span class="s8">Build a reactive content pipeline alongside campaigns</span></p>
+<p class="p28"><span class="s8">The best-performing non-outlier posts were reactive (Knicks win, Brunson MVP, Andreeva French Open). Nike should maintain a real-time content team dedicated to athlete moments that can go live within hours of results, capitalizing on cultural conversation at its peak.</span></p>
+<p class="p10"><span class="s8">REC 04</span></p>
+<p class="p29"><span class="s8">Use comment ratio as a campaign health metric</span></p>
+<p class="p28"><span class="s8">Comments-to-likes ratio is a more sensitive signal of audience reaction than raw likes alone. Tracking this metric across campaign posts in real time would allow Nike's social team to identify underperforming or negatively-received content earlier and adjust mid-campaign.</span></p>
+<p class="p30"><span class="s7">ANISH MURARI · PORTFOLIO</span></p>
+<p class="p31"><span class="s7">See more of my work</span></p>
+<p class="p32"><span class="s9"><a href="file:///Users/anishmurari/Downloads/index.html">← Back to Portfolio<span class="s13"></span></a></span></p>
+<p class="p33"><span class="s5">Nike Instagram Audit — June 2026 · Analysis by Anish Murari</span></p>
+</body>
+</html>

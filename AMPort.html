@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anish Murari — Marketing & Research</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0f0f0f; --accent: #FF4D00; --muted: #6b6b6b;
+    --border: #e5e5e5; --surface: #f7f7f7; --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--ink); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+  .nav-links a:hover { color: var(--ink); }
+
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 400px; gap: 80px; align-items: center; padding: 120px 48px 80px; max-width: 1100px; margin: 0 auto; }
+  .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 24px; }
+  .hero-name { font-family: 'Space Grotesk', sans-serif; font-size: clamp(48px, 7vw, 88px); font-weight: 700; line-height: 1.0; letter-spacing: -3px; margin-bottom: 24px; color: var(--ink); }
+  .hero-name em { font-style: normal; color: var(--accent); }
+  .hero-tagline { font-size: clamp(16px, 2vw, 20px); font-weight: 300; color: var(--muted); max-width: 500px; line-height: 1.6; margin-bottom: 40px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+
+  .hero-photo-wrap { position: relative; }
+  .hero-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; border-radius: 12px; display: block; }
+  .photo-accent { position: absolute; bottom: -16px; right: -16px; width: 80px; height: 80px; background: var(--accent); border-radius: 8px; z-index: -1; }
+
+  .stat-card { display: inline-flex; align-items: center; gap: 28px; background: var(--ink); color: var(--white); padding: 24px 32px; border-radius: 8px; flex-wrap: wrap; }
+  .stat-card-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.12); }
+  .stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -1px; color: var(--accent); line-height: 1; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 4px; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: var(--white); font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; padding: 13px 26px; border-radius: 4px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+  .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--ink); font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; padding: 13px 26px; border: 2px solid var(--border); border-radius: 4px; text-decoration: none; cursor: pointer; transition: border-color 0.2s, transform 0.15s; }
+  .btn-outline:hover { border-color: var(--ink); transform: translateY(-1px); }
+
+  .section { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 44px); font-weight: 700; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 48px; color: var(--ink); }
+  .divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+
+  .project-card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: box-shadow 0.25s, transform 0.25s; }
+  .project-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.08); transform: translateY(-4px); }
+  .project-card-header { background: var(--ink); padding: 48px; position: relative; overflow: hidden; }
+  .project-card-header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: var(--accent); opacity: 0.08; }
+  .project-tag { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 12px; }
+  .project-subtitle { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .project-card-body { padding: 40px 48px; }
+  .project-finding { background: var(--surface); border-left: 3px solid var(--accent); padding: 20px 24px; border-radius: 0 6px 6px 0; margin-bottom: 28px; }
+  .project-finding-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .project-finding-text { font-size: 15px; color: var(--ink); line-height: 1.6; }
+  .project-stats { display: flex; gap: 32px; margin-bottom: 32px; flex-wrap: wrap; }
+  .project-stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: var(--ink); letter-spacing: -0.5px; }
+  .project-stat-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .about-text { font-size: 17px; color: var(--ink); line-height: 1.75; }
+  .about-text p + p { margin-top: 20px; }
+  .about-details { display: flex; flex-direction: column; gap: 24px; }
+  .detail-block { border-top: 1px solid var(--border); padding-top: 20px; }
+  .detail-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .detail-value { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 500; color: var(--ink); }
+
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .cert-card { border: 1px solid var(--border); border-radius: 6px; padding: 24px; transition: border-color 0.2s; }
+  .cert-card:hover { border-color: var(--accent); }
+  .cert-org { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .cert-name { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .cert-status { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  .resume-panel { display: none; padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
+  .resume-panel.active { display: block; }
+  .resume-embed { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 64px; max-width: 760px; margin: 0 auto; font-family: 'Times New Roman', serif; }
+  .r-name { font-size: 26px; font-weight: 700; text-align: center; margin-bottom: 6px; }
+  .r-contact { text-align: center; font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .r-section { margin-bottom: 20px; }
+  .r-section-title { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1.5px solid var(--ink); padding-bottom: 4px; margin-bottom: 12px; }
+  .r-entry { margin-bottom: 14px; }
+  .r-entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .r-entry-co { font-weight: 700; font-size: 14px; }
+  .r-entry-date { font-size: 13px; color: var(--muted); white-space: nowrap; }
+  .r-entry-role { font-style: italic; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .r-entry ul { padding-left: 18px; }
+  .r-entry li { font-size: 13px; line-height: 1.6; margin-bottom: 3px; }
+  .r-entry li b { font-weight: 600; }
+  .r-coursework { font-size: 13px; line-height: 1.6; margin-top: 4px; }
+  .r-skills-row { font-size: 13px; line-height: 1.8; }
+  .r-skills-row b { font-weight: 600; }
+  .resume-actions { display: flex; gap: 12px; justify-content: center; margin-bottom: 32px; }
+
+  .contact-section { background: var(--ink); padding: 100px 48px; text-align: center; }
+  .contact-inner { max-width: 600px; margin: 0 auto; }
+  .contact-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--white); letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; }
+  .contact-title em { font-style: normal; color: var(--accent); }
+  .contact-sub { font-size: 16px; color: rgba(255,255,255,0.45); margin-bottom: 40px; line-height: 1.6; }
+  .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); color: var(--white); font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 4px; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); transition: background 0.2s, border-color 0.2s; cursor: pointer; }
+  .contact-btn:hover { background: var(--accent); border-color: var(--accent); }
+
+  footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.06); padding: 24px 48px; text-align: center; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: rgba(255,255,255,0.2); }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 48px; }
+    .hero-photo-wrap { order: -1; max-width: 260px; }
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero, .section, .resume-panel { padding-left: 24px; padding-right: 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .project-card-header, .project-card-body { padding: 28px; }
+    .contact-section { padding: 80px 24px; }
+    footer { padding: 20px 24px; }
+    .resume-embed { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">AM<span>.</span></a>
+  <div class="nav-links">
+    <a onclick="scrollTo({top:document.getElementById('work').offsetTop-80,behavior:'smooth'})">Work</a>
+    <a onclick="scrollTo({top:document.getElementById('about').offsetTop-80,behavior:'smooth'})">About</a>
+    <a onclick="scrollTo({top:document.getElementById('certifications').offsetTop-80,behavior:'smooth'})">Certifications</a>
+    <a onclick="showResume()">Resume</a>
+    <a onclick="scrollTo({top:document.getElementById('contact').offsetTop-80,behavior:'smooth'})">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Marketing · Analytics · Strategy</div>
+    <h1 class="hero-name">Anish<br>Murari<em>.</em></h1>
+    <p class="hero-tagline">Marketing junior at FDU focused on social media analytics, content strategy, and the data behind what actually drives brand engagement.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" onclick="event.preventDefault();scrollTo({top:document.getElementById('work').offsetTop-80,behavior:'smooth'})">View My Work</a>
+      <a class="btn-outline" onclick="showResume()">View Resume</a>
+    </div>
+    <div class="stat-card">
+      <div>
+        <div class="stat-num">13M</div>
+        <div class="stat-label">Likes — Nike's top post</div>
+      </div>
+      <div class="stat-card-divider"></div>
+      <div>
+        <div class="stat-num">20</div>
+        <div class="stat-label">Posts analyzed</div>
+      </div>
+      <div class="stat-card-divider"></div>
+      <div>
+        <div class="stat-num">1.2M</div>
+        <div class="stat-label">Avg total engagement</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-photo-wrap">
+    <img src="anish.png" alt="Anish Murari" class="hero-photo"/>
+    <div class="photo-accent"></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<section class="section" id="work">
+  <div class="section-label">Featured Project</div>
+  <h2 class="section-title">Nike Instagram<br>Social Media Audit</h2>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div class="project-tag">Social Media Analytics · Brand Strategy · Content Research</div>
+      <div class="project-title">Nike Instagram Audit — June 2026</div>
+      <div class="project-subtitle">A data-driven analysis of Nike's content strategy during the lead-up to the 2026 FIFA World Cup — tracking what actually drives engagement vs. what brands assume drives it.</div>
+    </div>
+    <div class="project-card-body">
+      <div class="project-stats">
+        <div><div class="project-stat-num">20</div><div class="project-stat-label">Posts tracked</div></div>
+        <div><div class="project-stat-num">13M</div><div class="project-stat-label">Peak likes</div></div>
+        <div><div class="project-stat-num">~516K</div><div class="project-stat-label">Avg eng. ex-outlier</div></div>
+        <div><div class="project-stat-num">14.2M</div><div class="project-stat-label">Peak total eng.</div></div>
+      </div>
+      <div class="project-finding">
+        <div class="project-finding-label">Key Finding</div>
+        <div class="project-finding-text">The highest-performing post — Ronaldo and LeBron James, "Define Greatness. Then Redefine It." — generated 13M+ likes and outperformed every World Cup campaign post combined. Zero campaign branding.</div>
+      </div>
+      <a href="nike-audit.html" class="btn-primary">Read Full Audit →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<div class="resume-panel" id="resume-panel">
+  <div class="section-label">Resume</div>
+  <h2 class="section-title" style="margin-bottom:24px;">Anish Murari</h2>
+  <div class="resume-actions">
+    <a href="Anish_Murari_Resume.docx" download class="btn-primary">Download .docx</a>
+  </div>
+  <div class="resume-embed">
+    <div class="r-name">Anish Murari</div>
+    <div class="r-contact">a.murari@student.fdu.edu &nbsp;•&nbsp; 443-774-9220 &nbsp;•&nbsp; linkedin.com/in/anish-murari-36a056294</div>
+
+    <div class="r-section">
+      <div class="r-section-title">Education</div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-entry-co">Fairleigh Dickinson University, Madison, NJ</span>
+          <span class="r-entry-date">Expected May 2027</span>
+        </div>
+        <div class="r-entry-role">Bachelor of Science in Marketing, Silberman College of Business</div>
+        <div class="r-coursework"><b>Relevant Coursework:</b> Marketing Research, Consumer Behavior, Digital Marketing, Social Media Marketing, Marketing Communications, Advanced Marketing Management, Management Information Systems, Operations Management</div>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Experience</div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-entry-co">Savoy Fitness, Baltimore, MD</span>
+          <span class="r-entry-date">April 2021 – Present</span>
+        </div>
+        <div class="r-entry-role">Marketing & Social Media Manager / Personal Trainer</div>
+        <ul>
+          <li>Manage end-to-end <b>content strategy and social media presence</b> using Canva, CapCut, iMovie, and Adobe Suite to drive client acquisition and brand visibility.</li>
+          <li><b>Track audience engagement data and KPIs</b> to evaluate content performance and optimize campaigns across platforms; inform creative decisions through data analysis.</li>
+          <li>Design and deliver personalized fitness and nutrition plans applying <b>client needs analysis</b> and iterative feedback to improve outcomes and long-term retention.</li>
+        </ul>
+      </div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-entry-co">Independent Sneaker Resale Business, Baltimore, MD</span>
+          <span class="r-entry-date">Sep. 2022 – Sep. 2024</span>
+        </div>
+        <div class="r-entry-role">Founder & Owner</div>
+        <ul>
+          <li>Operated a full-cycle resale business: sourced inventory, managed <b>pricing strategy</b>, and executed <b>Instagram-driven marketing campaigns</b> to grow a consistent customer base.</li>
+          <li>Identified <b>consumer demand trends</b> across demographics to guide sourcing decisions; expanded brand reach through strategic networking and community building.</li>
+        </ul>
+      </div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-entry-co">Independent Basketball Training, Baltimore, MD</span>
+          <span class="r-entry-date">June 2023 – Present</span>
+        </div>
+        <div class="r-entry-role">Founder & Owner</div>
+        <ul>
+          <li>Built a client pipeline through <b>word-of-mouth referrals</b>, independently managing scheduling, pricing, and communications to sustain and grow a consistent roster.</li>
+          <li>Design individualized training programs with measurable objectives, tracking athlete development across shooting, conditioning, situational awareness, and basketball IQ.</li>
+          <li>Communicate effectively with athletes and parents/guardians to establish clear goals and maintain consistent accountability toward results.</li>
+        </ul>
+      </div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-entry-co">Swim Quest, Livingston, NJ</span>
+          <span class="r-entry-date">Sep. 2025 – May 2026</span>
+        </div>
+        <div class="r-entry-role">Swim Instructor</div>
+        <ul>
+          <li>Developed personalized lesson plans for swimmers of all ages and skill levels, emphasizing water safety, technique, and confidence; maintained a positive, structured learning environment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Campus Involvement</div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-entry-co">FDU Men's Basketball Team, Fairleigh Dickinson University</span>
+          <span class="r-entry-date">Oct. 2023 – Oct. 2024</span>
+        </div>
+        <div class="r-entry-role">Member</div>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Skills & Certifications</div>
+      <div class="r-skills-row"><b>Certifications:</b> HubSpot Social Media Marketing &nbsp;•&nbsp; HubSpot Digital Marketing &nbsp;•&nbsp; HubSpot Content Marketing &nbsp;•&nbsp; Google Data Analytics — Coursera (in progress)</div>
+      <div class="r-skills-row"><b>Analytics & Tools:</b> Microsoft Excel &nbsp;•&nbsp; Canva &nbsp;•&nbsp; Adobe Illustrator / Photoshop / Lightroom &nbsp;•&nbsp; iMovie &nbsp;•&nbsp; CapCut</div>
+      <div class="r-skills-row"><b>Platforms:</b> Instagram &nbsp;•&nbsp; TikTok &nbsp;•&nbsp; LinkedIn &nbsp;•&nbsp; Microsoft Office Suite</div>
+      <div class="r-skills-row"><b>Core Skills:</b> Social media analytics &nbsp;•&nbsp; Content strategy &nbsp;•&nbsp; Marketing research &nbsp;•&nbsp; Brand positioning &nbsp;•&nbsp; Business operations</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<section class="section" id="about">
+  <div class="section-label">About</div>
+  <h2 class="section-title">Background</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a student at Fairleigh Dickinson University studying Marketing at the Silberman College of Business. My focus is between data and brand strategy — understanding what makes content perform, then building the case for why it works.</p>
+      <p>Outside academics, I've built and operated two independent businesses — a basketball training operation and a sneaker resale business, which all grew through self-directed marketing and client acquisition. That hands-on experience pushed me toward the analytics side of marketing.</p>
+    </div>
+    <div class="about-details">
+      <div class="detail-block">
+        <div class="detail-label">Education</div>
+        <div class="detail-value">B.S. Marketing, FDU Silberman College of Business</div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Expected Graduation</div>
+        <div class="detail-value">May 2027</div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Focus Areas</div>
+        <div class="detail-value">Social Media Analytics · Content Strategy · Marketing Research · Product Management</div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Tools</div>
+        <div class="detail-value">Excel · Canva · Adobe Suite · CapCut · iMovie · Instagram · TikTok</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<section class="section" id="certifications">
+  <div class="section-label">Credentials</div>
+  <h2 class="section-title">Certifications</h2>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-org">HubSpot</div>
+      <div class="cert-name">Social Media Marketing Certification</div>
+      <div class="cert-status">✓ Completed</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-org">HubSpot</div>
+      <div class="cert-name">Digital Marketing Certification</div>
+      <div class="cert-status">✓ Completed</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-org">HubSpot</div>
+      <div class="cert-name">Content Marketing Certification</div>
+      <div class="cert-status">✓ Completed</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-org">Google × Coursera</div>
+      <div class="cert-name">Data Analytics Certificate</div>
+      <div class="cert-status">⟳ In Progress</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-org">Microsoft</div>
+      <div class="cert-name">Office Suite — Excel, PowerPoint, Word, Outlook, Access</div>
+      <div class="cert-status">✓ Proficient</div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <h2 class="contact-title">Let's<br><em>connect.</em></h2>
+    <p class="contact-sub">Open to internship opportunities in marketing for Fall 2026.</p>
+    <div class="contact-links">
+      <a href="mailto:a.murari@student.fdu.edu" class="contact-btn">Email Me</a>
+      <a href="https://www.linkedin.com/in/anish-murari-36a056294/" target="_blank" class="contact-btn">LinkedIn</a>
+      <a onclick="showResume()" class="contact-btn">View Resume</a>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Anish Murari — Built from scratch</footer>
+
+<script>
+function showResume() {
+  const panel = document.getElementById('resume-panel');
+  const isActive = panel.classList.contains('active');
+  if (isActive) {
+    panel.classList.remove('active');
+  } else {
+    panel.classList.add('active');
+    setTimeout(() => {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}
+</script>
+</body>
+</html>
